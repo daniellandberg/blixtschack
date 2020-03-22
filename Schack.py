@@ -16,13 +16,16 @@ black = 60 * int(minuter)
 def toTime(tid):
     t = tid
     min = 0
-    for i in range(4):
+    while True:
         if ((t-60) >= 0):
             min = min + 1
             t = t - 60
         if ((t-60) < 0):
             break
-    return str(min) + ":" + str(t % 60)
+        sec = int(t % 60)
+        if sec <= 9:
+            sec = "0" + str(sec)
+    return str(min) + ":" + str(sec)
 
 
 def change():
