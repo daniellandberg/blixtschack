@@ -15,9 +15,9 @@ def change():
     th.Thread(target=change, args=(),
               name='change', daemon=True).start()
 
-
+host = '00.00.00.00'
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((socket.gethostname(), 1251))
+s.connect((host, 1251))
 
 th.Thread(target=change, args=(),
           name='change', daemon=True).start()
