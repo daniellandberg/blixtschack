@@ -18,9 +18,9 @@ def toTime(tid):
 
 
 HEADERSIZE = 10
-
+host = '00.00.00.00'
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((socket.gethostname(), 1251))
+s.bind((host, 1251))
 s.listen(5)
 flag = 1
 Connection = []
